@@ -1,5 +1,12 @@
 {
     "manifest_version": 3,
     "name": "My ReactJs Extension",
-    "version": "1.0.0"
+    "description": "This extension demonstrates a browser action with ReactJs",
+    "version": "1.0.0",
+    "icons": {
+        "16" : "icons/main_icon.png",
+        "48" : "icons/main_icon.png",
+        "128" : "icons/main_icon.png"
+
+    }
 }
