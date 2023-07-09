@@ -1,3 +1,6 @@
+const path = require('path');
+const CopyPlugin = require('copy-webpack-plugin');
+
 module.exports = {
     mode: 'development',
     entry: './src/test.tsx',
@@ -10,10 +13,18 @@ module.exports = {
             }
         ]
     },
+    plugins: [
+        new CopyPlugin({
+            patterns: [
+                { from: path.resolve('src/assets/manifest.json'), to: path.resolve('dist') },
+                { from: path.resolve('src/assets'), to: path.resolve('dist/assets/') },
+            ],
+        }),
+    ],
     resolve: {
         extensions: ['.tsx', '.ts', '.js']
     },
     output: {
-        filename: './dist/index.js'
+        filename: './index.js'
     }
 }

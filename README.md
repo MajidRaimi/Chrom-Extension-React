@@ -56,7 +56,7 @@ module.exports = {
         extensions: ['.tsx', '.ts', '.js']
     }
     output: {
-        filename: './dist/index.js'
+        filename: './index.js'
     }
 }
 ```
@@ -103,4 +103,30 @@ Create a `tsconfig.json` file
  }
 ```
 
+move the icons folder to the dist folder.
 
+### 04 - Add **Copy Webpack**
+
+- Move the `manifest.json` file to the `src` folder.
+- Install `copy-webpack-plugin`
+```bash
+npm i copy-webpack-plugin --save-dev
+```
+- Add it to the `webpack.config.js` file
+```js
+const CopyPlugin = require('copy-webpack-plugin');
+const path = require('path');
+
+module.exports = {
+    // ...
+    plugins: [
+        new CopyPlugin({
+            patterns: [
+                { from: path.resolve('src/manifest.json'), to: path.resolve('dist') },
+            ],
+        }),
+    ],
+    // ...
+}
+```
+ 
