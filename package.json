@@ -1,0 +1,16 @@
+{
+  "name": "chrome-extensions",
+  "version": "1.0.0",
+  "description": "- Get the `manifest.json` file from the [chrome extension documentation](https://developer.chrome.com/docs/extensions/mv3/manifest/) and add it to the public folder.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  }
+}
